@@ -1,0 +1,10 @@
+setup.py
+src/Codigos/AlgoritmoGeneticoBinario.py
+src/Codigos/__init__.py
+src/Vistas/ABGenetico.py
+src/Vistas/__init__.py
+src/Vistas/main.py
+src/algoritmos_bioinspirados.egg-info/PKG-INFO
+src/algoritmos_bioinspirados.egg-info/SOURCES.txt
+src/algoritmos_bioinspirados.egg-info/dependency_links.txt
+src/algoritmos_bioinspirados.egg-info/top_level.txt
