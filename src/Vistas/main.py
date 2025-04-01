@@ -1,6 +1,8 @@
 import streamlit as st
 from Vistas.ABGenetico import genetic_algorithm_page
 from Vistas.ABSInmune import immune_algorithm_page
+from Vistas.ABHormigas import ants_algorithm_page
+from Codigos.Recorrido_Simulado import simulated_tour_algorithm_page
 
 # Configurar la página
 st.set_page_config(page_title="Algoritmos Bioinspirados", page_icon="🧬", layout="centered")
@@ -61,12 +63,12 @@ def main_page():
             st.button("Genético", 
                      on_click=change_page, args=('genetic',),
                      key="genetico")
-            #st.button("Recocido Simulado", 
-            #         on_click=change_page, args=('simulated',),
-            #         key="recocido")
-            #st.button("Colonia de Hormigas", 
-            #         on_click=change_page, args=('ants',),
-            #         key="hormigas")
+            st.button("Recocido Simulado", 
+                     on_click=change_page, args=('simulated',),
+                     key="recocido")
+            st.button("Colonia de Hormigas", 
+                     on_click=change_page, args=('ants',),
+                     key="hormigas")
             st.button("Sistemas Inmunes", 
                      on_click=change_page, args=('immune',),
                      key="inmunes")
@@ -80,3 +82,7 @@ elif st.session_state.current_page == 'genetic':
     genetic_algorithm_page(change_page)
 elif st.session_state.current_page == 'immune':
     immune_algorithm_page(change_page)
+elif st.session_state.current_page == 'ants':
+    ants_algorithm_page(change_page)
+elif st.session_state.current_page == 'simulated':
+    simulated_tour_algorithm_page(change_page)
