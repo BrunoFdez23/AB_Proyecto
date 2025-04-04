@@ -1,8 +1,16 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from Vistas.ABGenetico import genetic_algorithm_page
+
 import streamlit as st
 from Vistas.ABGenetico import genetic_algorithm_page
 from Vistas.ABSInmune import immune_algorithm_page
 from Vistas.ABHormigas import ants_algorithm_page
-from Codigos.Recorrido_Simulado import simulated_tour_algorithm_page
+from Vistas.ABRecorrido_Simulado import simulated_annealing_page
+
 
 # Configurar la página
 st.set_page_config(page_title="Algoritmos Bioinspirados", page_icon="🧬", layout="centered")
@@ -12,28 +20,31 @@ st.markdown(
     """
     <style>
         body {
-            background-color: #6b6f2f;
-            color: black;
+            background-color: #515d7e;
+          
         }
         .stApp {
-            background-color: #6b6f2f;
+            background-color: #515d7e;
+            color: black;
         }
         /* Segunda columna */
         div[data-testid="stHorizontalBlock"] > div:nth-child(2) {
-            background-color: #ccffcc;
-            border-radius: 10px;
+            background-color: #70778b ;
+            border-radius: 5px;
+            color:black;
         }
         .stButton>button {
             width: 80%;
-            border-radius: 20px;
-            border: 2px solid black;
-            background-color: #b0d48c;
+            border-radius: 10px;
+            border: 2px solid  #515d7e;
+            background-color: #182957;
             color: black;
             font-size: 18px;
             padding: 10px;
         }
+
         .selected-button {
-            background-color: #6b8c42 !important;
+            background-color: #182957 !important;
             color: white !important;
             font-weight: bold;
         }
@@ -56,14 +67,14 @@ def main_page():
     _, colTittle, _ = st.columns([1.5, 7, 1.5])
 
     with colTittle:
-        st.markdown("<h1 style='text-align: center; color: #c1e59d; text-shadow: -2px -2px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000, 1px 1px 0 #000;'>Algoritmos Bioinspirados</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center;border: 0%; color: #515d7e; '>Algoritmos Bioinspirados</h1>", unsafe_allow_html=True)
 
         _, colButtons, _ = st.columns([1.5, 3, 1])
         with colButtons:
             st.button("Genético", 
                      on_click=change_page, args=('genetic',),
                      key="genetico")
-            st.button("Recocido Simulado", 
+            st.button("Recorrido Simulado", 
                      on_click=change_page, args=('simulated',),
                      key="recocido")
             st.button("Colonia de Hormigas", 
@@ -85,4 +96,4 @@ elif st.session_state.current_page == 'immune':
 elif st.session_state.current_page == 'ants':
     ants_algorithm_page(change_page)
 elif st.session_state.current_page == 'simulated':
-    simulated_tour_algorithm_page(change_page)
+    simulated_annealing_page(change_page)

@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import streamlit as st
 import random
 from Codigos.hormigas import ejecutar_algoritmo_hormigas
@@ -19,20 +24,20 @@ def ants_algorithm_page(change_page_function):
             }
             /* Segunda columna */
             div[data-testid="stHorizontalBlock"] > div:nth-child(2) {
-                background-color: #6b6f2f;
+                background-color: #515d7e;
                 border-radius: 10px;
             }
             .stButton>button {
                 width: 20%;
                 border-radius: 20px;
                 border: 2px solid black;
-                background-color: #b0d48c;
+                background-color: #182957;
                 color: black;
                 font-size: 18px;
                 padding: 10px;
             }
             .chromosome {
-                font-family: monospace;
+                font-family: Georgia, 'Times New Roman', Times, serif;
                 font-size: 18px;
                 margin: 5px 0;
             }
