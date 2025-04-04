@@ -12,7 +12,7 @@ def simulated_annealing(distances, initial_temp, cooling_rate, iterations):
     best_solution = np.copy(current_solution)
     best_distance = current_distance
 
-    temp = initial_temp
+    temp = initial_temp 
     historial = []
 
     for iteration in range(iterations):

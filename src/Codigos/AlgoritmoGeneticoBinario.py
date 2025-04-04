@@ -8,7 +8,7 @@ def ejecutar_algoritmo_genetico():
     MUT_RATE = 0.1  # Probabilidad de mutación
 
     # 1. Inicialización de la población
-    def init_population(size, length):
+    def init_population(size, length): 
         return np.random.randint(2, size=(size, length))
 
     # 2. Función de evaluación (cantidad de 1s en la cadena)

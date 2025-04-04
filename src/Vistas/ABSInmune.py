@@ -10,7 +10,7 @@ def immune_algorithm_page(change_page_function):
     # Estilos de la página
     st.markdown(
         """
-        <style>
+        <style> 
             .main-container {
                 background-color: white;
                 border-radius: 10px;

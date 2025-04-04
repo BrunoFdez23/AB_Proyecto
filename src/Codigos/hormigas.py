@@ -10,7 +10,7 @@ def ejecutar_algoritmo_hormigas():
     NUM_NODES = st.sidebar.slider("Número de ciudades", 5, 20, 10)
     ITERATIONS = st.sidebar.slider("Iteraciones", 10, 200, 50)
     EVAPORATION_RATE = st.sidebar.slider("Tasa de evaporación", 0.1, 0.9, 0.5)
-
+ 
     # Inicialización
     np.random.seed(42)
     nodes = np.random.rand(NUM_NODES, 2) * 500

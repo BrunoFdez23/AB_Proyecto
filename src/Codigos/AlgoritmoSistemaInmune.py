@@ -8,7 +8,7 @@ def ejecutar_algoritmo_sistema_inmune():
     CLONE_RATE = 2      # Número de clones por anticuerpo
 
     # Función a optimizar
-    def fitness(x):
+    def fitness(x): 
         return x * np.sin(10 * np.pi * x) + 2.0
 
     # Inicializar población aleatoria en el rango [0,1]

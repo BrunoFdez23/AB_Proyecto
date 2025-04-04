@@ -59,7 +59,7 @@ def ejecutar_recocido_simulado():
                 background-color: #515d7e;
                 border-radius: 10px;
             }
-            .stButton>button {
+            .stButton>button { 
                 width: 20%;
                 border-radius: 20px;
                 border: 2px solid black;

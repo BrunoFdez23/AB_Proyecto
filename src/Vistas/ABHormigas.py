@@ -13,7 +13,7 @@ def ants_algorithm_page(change_page_function):
         change_page_function('main')
     
     # Estilos de la página
-    st.markdown(
+    st.markdown( 
         """
         <style>
             .main-container {
@@ -49,7 +49,7 @@ def ants_algorithm_page(change_page_function):
     # Contenido del algoritmo genético
     with st.container():
         
-        st.markdown("## Algoritmo Genético")
+        st.markdown("## Algoritmo Colonia de Hormigas")
         
         st.markdown("""
         Este algoritmo simula 10 hormigas artificiales buscando la ruta más corta entre 10 ciudades. Cada hormiga construye una ruta probabilística, donde la probabilidad de moverse a la siguiente ciudad depende de:

@@ -16,7 +16,7 @@ from Vistas.ABRecorrido_Simulado import simulated_annealing_page
 st.set_page_config(page_title="Algoritmos Bioinspirados", page_icon="🧬", layout="centered")
 
 # Estilos de la página
-st.markdown(
+st.markdown( 
     """
     <style>
         body {

@@ -11,7 +11,7 @@ def genetic_algorithm_page(change_page_function):
     st.markdown(
         """
         <style>
-            .main-container {
+            .main-container { 
                 background-color: white;
                 border-radius: 10px;
                 padding: 20px;
